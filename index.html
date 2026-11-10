@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jithesh Pallikkara</title>
+<meta name="description" content="Jithesh Pallikkara, healthcare IT leader at Florida Blue. 27 years turning complex enterprise platforms into business outcomes.">
+<meta property="og:title" content="Jithesh Pallikkara">
+<meta property="og:description" content="Healthcare IT leader turning complex enterprise platforms into business outcomes.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://jitheshpallikkara.com/">
+<meta property="og:image" content="https://jitheshpallikkara.com/assets/profile.jpg">
+<link rel="canonical" href="https://jitheshpallikkara.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,500;112,700;125,800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single column résumé narrative; a to-scale career span bar is the signature element. */
+:root {
+  --bg: #f3f6f7;
+  --surface: #ffffff;
+  --ink: #0f2029;
+  --muted: #4c5f69;
+  --line: #d5dfe3;
+  --accent: #0b6e6c;
+  --accent-soft: #dcefee;
+  --fin: #6d8794;
+  --tel: #b7c6cd;
+  --award: #9a6a00;
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c1518; --surface: #132126; --ink: #e4edef; --muted: #9db0b7; --line: #24363d;
+    --accent: #4cc0bb; --accent-soft: #143a3a; --fin: #6f8e9b; --tel: #3d525a; --award: #e2b44a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0c1518; --surface: #132126; --ink: #e4edef; --muted: #9db0b7; --line: #24363d;
+  --accent: #4cc0bb; --accent-soft: #143a3a; --fin: #6f8e9b; --tel: #3d525a; --award: #e2b44a;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, .btn:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 980px; margin: 0 auto; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.12; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; font-stretch: 125%; letter-spacing: -0.01em; }
+h3 { font-size: 1.2rem; font-weight: 700; font-stretch: 112%; }
+.eyebrow { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin: 0 0 0.6rem; }
+p { margin: 0; }
+.prose { max-width: 65ch; display: grid; gap: 1rem; color: var(--ink); }
+section { padding-block: clamp(2.5rem, 6vw, 4.5rem); border-top: 1px solid var(--line); }
+.section-head { display: grid; gap: 0.25rem; margin-bottom: 1.75rem; }
+
+/* Top bar */
+.top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-block: 1.1rem; flex-wrap: wrap; }
+.mark { font-family: var(--font-display); font-weight: 800; font-stretch: 125%; letter-spacing: 0.02em; text-decoration: none; color: var(--ink); }
+.nav { display: flex; gap: 1.1rem; flex-wrap: wrap; font-size: 0.95rem; }
+.nav a { color: var(--muted); text-decoration: none; }
+.nav a:hover { color: var(--accent); }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(1.5rem, 5vw, 3.5rem); align-items: center; padding-block: clamp(2rem, 6vw, 4rem) clamp(2.5rem, 6vw, 4rem); }
+.hero h1 { font-size: clamp(2.4rem, 6.4vw, 4.4rem); font-weight: 800; font-stretch: 125%; letter-spacing: -0.02em; }
+.hero .lede { font-family: var(--font-display); font-weight: 500; font-stretch: 112%; font-size: clamp(1.2rem, 2.4vw, 1.55rem); line-height: 1.3; margin-top: 1rem; max-width: 30ch; }
+.hero .sub { color: var(--muted); margin-top: 1rem; max-width: 56ch; }
+.photo { width: clamp(150px, 22vw, 220px); aspect-ratio: 1; max-width: 100%; border-radius: 50%; object-fit: cover; border: 4px solid var(--surface); box-shadow: 0 0 0 1px var(--line); }
+.actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.6rem; }
+.btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.7rem 1.15rem; border-radius: 6px; font-weight: 600; text-decoration: none; border: 1px solid var(--accent); }
+.btn.primary { background: var(--accent); color: var(--bg); }
+.btn.ghost { color: var(--accent); }
+.where { font-family: var(--font-mono); font-size: 0.82rem; color: var(--muted); margin-top: 1.2rem; }
+
+/* Facts strip */
+.facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fact { background: var(--surface); padding: 1.1rem 1.2rem; display: grid; gap: 0.2rem; align-content: start; }
+.fact b { font-family: var(--font-display); font-weight: 800; font-stretch: 125%; font-size: 1.7rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.fact span { color: var(--muted); font-size: 0.92rem; line-height: 1.35; }
+
+/* Career span */
+.span { margin-top: 2rem; }
+.bar { display: flex; height: 38px; border-radius: 6px; overflow: hidden; gap: 2px; }
+.seg { min-width: 0; display: flex; align-items: center; padding-inline: 0.55rem; font-size: 0.8rem; font-weight: 600; white-space: nowrap; overflow: hidden; color: var(--bg); }
+.seg.tel { background: var(--tel); color: var(--ink); }
+.seg.fin { background: var(--fin); }
+.seg.hc { background: var(--accent); }
+.ticks { position: relative; height: 1.6rem; font-family: var(--font-mono); font-size: 0.74rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.ticks span { position: absolute; top: 0.35rem; transform: translateX(-50%); }
+.ticks span::before { content: ""; position: absolute; left: 50%; top: -0.45rem; height: 0.35rem; border-left: 1px solid var(--line); }
+.legend { display: flex; gap: 1.2rem; flex-wrap: wrap; font-size: 0.9rem; color: var(--muted); margin-top: 0.4rem; }
+.legend i { display: inline-block; width: 0.8rem; height: 0.8rem; border-radius: 2px; margin-right: 0.4rem; vertical-align: -0.05rem; }
+
+/* Case studies */
+.cases { display: grid; gap: 1.25rem; }
+.case { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: clamp(1.25rem, 3vw, 2rem); display: grid; gap: 1rem; }
+.case.lead { border-color: var(--accent); }
+.case-top { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: baseline; }
+.org { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); letter-spacing: 0.04em; }
+.badge { display: inline-flex; align-items: center; gap: 0.45rem; font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--award); border: 1px solid currentColor; border-radius: 999px; padding: 0.25rem 0.7rem; text-decoration: none; }
+.cra { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.cra div { display: grid; gap: 0.35rem; align-content: start; }
+.cra dt { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+.cra dd { margin: 0; font-size: 0.98rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; margin: 0; padding: 0; }
+.chips li { font-size: 0.85rem; background: var(--accent-soft); color: var(--ink); padding: 0.2rem 0.6rem; border-radius: 4px; }
+
+/* Experience */
+.roles { list-style: none; margin: 0; padding: 0; display: grid; }
+.role { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 1.25rem; padding-block: 1.25rem; border-bottom: 1px solid var(--line); }
+.role:first-child { padding-top: 0; }
+.yrs { font-family: var(--font-mono); font-size: 0.85rem; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 0.2rem; }
+.role h3 { font-size: 1.1rem; }
+.role .co { color: var(--muted); font-size: 0.95rem; margin-top: 0.15rem; }
+.role p.d { margin-top: 0.55rem; max-width: 65ch; }
+.role ul { margin: 0.55rem 0 0; padding-left: 1.1rem; max-width: 65ch; display: grid; gap: 0.25rem; }
+
+/* Skills */
+.skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.75rem; }
+.skills h3 { font-size: 1rem; margin-bottom: 0.6rem; }
+.skills ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.3rem; color: var(--ink); }
+
+/* Contact */
+.contact { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 2rem; align-items: start; }
+.contact-card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1.4rem; display: grid; gap: 1rem; }
+.contact-row { display: grid; gap: 0.2rem; }
+.contact-row label { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.copy-line { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+.copy-line code { font-family: var(--font-mono); font-size: 0.95rem; user-select: all; overflow-wrap: anywhere; }
+.copy { font: inherit; font-size: 0.85rem; padding: 0.25rem 0.65rem; border-radius: 4px; border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; }
+footer { padding-block: 2rem 3rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.88rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+
+@media (max-width: 760px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .hero .photo { order: -1; width: 128px; }
+  .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cra, .skills, .contact { grid-template-columns: minmax(0, 1fr); }
+  .role { grid-template-columns: minmax(0, 1fr); gap: 0.3rem; }
+  .seg { font-size: 0; padding: 0; }
+  .ticks span:nth-child(even) { display: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .btn, .nav a { transition: color .15s, background-color .15s; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="#top" id="top">JP</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#work">Selected work</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div>
+      <p class="eyebrow">Senior IT Manager · Florida Blue</p>
+      <h1>Jithesh Pallikkara</h1>
+      <p class="lede">Healthcare IT leader turning complex enterprise platforms into business outcomes.</p>
+      <p class="sub">27 years across healthcare, banking and global consulting. I lead technology for enrollment and billing at Florida Blue, where my teams delivered an award-winning member app and are moving enrollment off the mainframe onto an AI-enabled platform.</p>
+      <div class="actions">
+        <a class="btn primary" href="#work">See selected work</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+      <p class="where">Jacksonville, Florida · TOGAF certified</p>
+    </div>
+    <img class="photo" src="assets/profile.jpg" alt="Portrait of Jithesh Pallikkara" width="220" height="220">
+  </div>
+
+  <div class="facts" role="list">
+    <div class="fact" role="listitem"><b>27 yrs</b><span>in enterprise IT, since 1999</span></div>
+    <div class="fact" role="listitem"><b>30+</b><span>people on the member app team</span></div>
+    <div class="fact" role="listitem"><b>Platinum</b><span>Best Designed Mobile App, Fall 2017</span></div>
+    <div class="fact" role="listitem"><b>10 yrs</b><span>leading healthcare IT at Florida Blue</span></div>
+  </div>
+
+  <section id="about" style="border-top:0">
+    <div class="section-head">
+      <p class="eyebrow">About</p>
+      <h2>From data architecture to business transformation</h2>
+    </div>
+    <div class="prose">
+      <p>I lead IT delivery at Florida Blue, where I've spent the last decade helping a large health plan modernize the systems behind enrollment, billing and the member experience. My focus is business transformation: aligning technology roadmaps with what the business actually needs, then getting teams to deliver it.</p>
+      <p>Before Florida Blue, I was a BI Solution and Data Architect at Citi, designing the global analytics program that brought the bank's internal data into common warehouses. I spent 11 years with Tata Consultancy Services before that, rising from business analyst to BI architect on programs for Citi, USAA and banks in India, after starting as a software engineer at Hughes Telecom in 1999.</p>
+      <p>I'm a TOGAF-certified enterprise architect with a B.Tech in Mechanical Engineering from the University of Calicut. That engineering start still shapes how I work: break the system down, find the constraint, fix it.</p>
+    </div>
+
+    <div class="span" aria-label="Career span from 1999 to 2026, by industry">
+      <div class="bar">
+        <div class="seg tel" style="width:4.4%" title="Hughes Telecom, 1999 to 2001">Telecom</div>
+        <div class="seg fin" style="width:43.7%" title="Tata Consultancy Services, 2001 to 2012">Tata Consultancy Services</div>
+        <div class="seg fin" style="width:3.3%" title="Fujitsu America, 2012 to 2013">Fujitsu</div>
+        <div class="seg fin" style="width:9.6%" title="Citi, 2013 to 2016">Citi</div>
+        <div class="seg hc" style="width:38.9%" title="Florida Blue, 2016 to now">Florida Blue</div>
+      </div>
+      <div class="ticks" aria-hidden="true">
+        <span style="left:0.4%">2000</span><span style="left:18.9%">2005</span><span style="left:37.4%">2010</span><span style="left:55.9%">2015</span><span style="left:74.4%">2020</span><span style="left:92.9%">2025</span>
+      </div>
+      <div class="legend">
+        <span><i style="background:var(--tel)"></i>Telecom</span>
+        <span><i style="background:var(--fin)"></i>Banking, insurance and finance</span>
+        <span><i style="background:var(--accent)"></i>Healthcare</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="section-head">
+      <p class="eyebrow">Selected work</p>
+      <h2>Three programs, three kinds of change</h2>
+    </div>
+    <div class="cases">
+      <article class="case lead">
+        <div class="case-top">
+          <div>
+            <p class="org">Florida Blue · Member mobile app</p>
+            <h3>An award-winning one-stop app for members</h3>
+          </div>
+          <a class="badge" href="https://bestmobileappawards.com/app-submission/florida-blue/" target="_blank" rel="noopener">Platinum · Best Designed Mobile App 2017</a>
+        </div>
+        <dl class="cra">
+          <div><dt>Challenge</dt><dd>Members had to go to different places for ID cards, claims, benefits and plan information.</dd></div>
+          <div><dt>What I did</dt><dd>Led a team of more than 30 people delivering native iOS and Android apps, from roadmap through launch and ongoing releases.</dd></div>
+          <div><dt>Result</dt><dd>Won the Platinum Award for Best Designed Mobile App in the 2017 Fall Best Mobile App Awards, and held a 4+ star store rating.</dd></div>
+        </dl>
+        <ul class="chips" aria-label="App capabilities">
+          <li>Digital ID cards</li><li>Claims search</li><li>Find doctors and urgent care by location</li><li>Pay your bill</li><li>Prescriptions</li><li>Compare prices</li><li>Touch ID login</li>
+        </ul>
+      </article>
+
+      <article class="case">
+        <div class="case-top">
+          <div>
+            <p class="org">Florida Blue · Enrollment and billing</p>
+            <h3>Enrollment modernization: from mainframe to an AI-enabled platform</h3>
+          </div>
+        </div>
+        <dl class="cra">
+          <div><dt>Challenge</dt><dd>Member enrollment ran on a legacy mainframe application that was costly to change and slow to support new products.</dd></div>
+          <div><dt>What I did</dt><dd>Led the transformation of the enrollment domain to a modern technology stack with AI built in, from architecture and execution planning through migration and change management.</dd></div>
+          <div><dt>Result</dt><dd>A modern enrollment platform that supports Group Market growth and an improved enrollment and billing digital experience.</dd></div>
+        </dl>
+      </article>
+
+      <article class="case">
+        <div class="case-top">
+          <div>
+            <p class="org">Citi · Global analytics</p>
+            <h3>One global data warehouse for a global bank</h3>
+          </div>
+        </div>
+        <dl class="cra">
+          <div><dt>Challenge</dt><dd>Retail banking and cards data sat in regional systems, which made global reporting slow and inconsistent.</dd></div>
+          <div><dt>What I did</dt><dd>Architected the Genesis and Global Analytical programs: Teradata data models, ETL design and the reporting layer, with onsite and offshore teams.</dd></div>
+          <div><dt>Result</dt><dd>Citi's internal data consolidated globally into common warehouses, with big data and Tableau reporting for the Cards business.</dd></div>
+        </dl>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="section-head">
+      <p class="eyebrow">Experience</p>
+      <h2>27 years, newest first</h2>
+    </div>
+    <ol class="roles">
+      <li class="role">
+        <div class="yrs">2016 – now</div>
+        <div>
+          <h3>Senior IT Manager</h3>
+          <p class="co">Florida Blue (BlueCross BlueShield of Florida), Jacksonville</p>
+          <ul>
+            <li>Leads technology for the Enrollment and Billing domain, including the move from mainframe to an AI-enabled platform.</li>
+            <li>Delivered the award-winning Florida Blue member app and marketing applications.</li>
+            <li>Set technology direction for the WebTPA transition and oversaw Sales IT.</li>
+            <li>Owns team budget, performance management and career development.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="role">
+        <div class="yrs">2013 – 2016</div>
+        <div>
+          <h3>BI Solution and Data Architect</h3>
+          <p class="co">Citi, Jacksonville</p>
+          <p class="d">Architected Citi's global analytics program, consolidating internal data worldwide into common warehouses, with Teradata modeling, big data for Cards and Tableau reporting.</p>
+        </div>
+      </li>
+      <li class="role">
+        <div class="yrs">2012 – 2013</div>
+        <div>
+          <h3>Senior Consultant, Oracle BI</h3>
+          <p class="co">Fujitsu America</p>
+          <p class="d">Built a consolidated corporate reporting platform for a finance application merger at Medical Services Company, and delivered planning, budgeting and BI strategy for finance clients.</p>
+        </div>
+      </li>
+      <li class="role">
+        <div class="yrs">2001 – 2012</div>
+        <div>
+          <h3>Business Analyst to BI Architect</h3>
+          <p class="co">Tata Consultancy Services</p>
+          <ul>
+            <li>Citi (2006 – 2012): led the Genesis program consolidating Retail Bank and Cards data globally, and the enterprise planning platforms for Citi finance.</li>
+            <li>USAA (2003 – 2006): Lead Architect for executive decision support and Auto claims reporting.</li>
+            <li>Earlier: built ALMITY, an asset-liability management product for Indian banks.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="role">
+        <div class="yrs">1999 – 2001</div>
+        <div>
+          <h3>Software Engineer</h3>
+          <p class="co">Hughes Telecom India</p>
+          <p class="d">Java development for a telecom project.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="skills">
+    <div class="section-head">
+      <p class="eyebrow">Skills and credentials</p>
+      <h2>What I bring</h2>
+    </div>
+    <div class="skills">
+      <div>
+        <h3>Leadership</h3>
+        <ul><li>Business transformation</li><li>IT strategy and roadmaps</li><li>Global delivery</li><li>Stakeholder and vendor management</li><li>Agile at scale, SDLC governance</li><li>Budget and team leadership</li></ul>
+      </div>
+      <div>
+        <h3>Architecture and data</h3>
+        <ul><li>Enterprise architecture (TOGAF)</li><li>Legacy modernization</li><li>AI-enabled platforms</li><li>Data warehousing and BI</li><li>Mobile app delivery</li></ul>
+      </div>
+      <div>
+        <h3>Domains and education</h3>
+        <ul><li>Healthcare payer: enrollment, billing, member experience</li><li>Banking, cards and insurance</li><li>TOGAF Certified</li><li>B.Tech, Mechanical Engineering, University of Calicut, 1999</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <div class="section-head" style="margin:0">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's talk about healthcare transformation</h2>
+        <p class="prose" style="margin-top:0.75rem;color:var(--muted)">I'm glad to connect with leaders working on digital health, legacy modernization and AI in healthcare.</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-row">
+          <label for="email-text">Email</label>
+          <div class="copy-line"><code id="email-text">hello@jitheshpallikkara.com</code><button class="copy" id="copy-email" type="button">Copy</button></div>
+        </div>
+        <div class="contact-row">
+          <label>LinkedIn</label>
+          <a href="https://www.linkedin.com/in/jithesh-pallikkara-5842348/" target="_blank" rel="noopener">linkedin.com/in/jithesh-pallikkara-5842348</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Jithesh Pallikkara</span>
+    <span>Jacksonville, Florida</span>
+  </footer>
+</div>
+
+<script>
+document.getElementById('copy-email').addEventListener('click', function () {
+  var btn = this, text = document.getElementById('email-text');
+  function selectIt() { var r = document.createRange(); r.selectNodeContents(text); var s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Selected'; }
+  try {
+    navigator.clipboard.writeText(text.textContent).then(function () { btn.textContent = 'Copied'; }, selectIt);
+  } catch (e) { selectIt(); }
+});
+</script>
+</body>
+</html>
